@@ -2,12 +2,6 @@ import { StyleSheet } from "react-native";
 import Colors from '../../assets/Colors/Colors'
 
 const homeStyle = StyleSheet.create({
-    home:{
-        paddingTop:10,
-        paddingLeft:'5%',
-        paddingRight:'5%',
-        paddingBottom:80
-    },
     header:{
         flexDirection:'row',
         width:'100%',

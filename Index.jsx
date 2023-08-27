@@ -10,7 +10,7 @@ import User from './Screens/User/User';
 import SafeAreaViewAndroid from './Components/Helper/SafeAreaViewAndroid';
 
 const Index = () => {
-    const [navigate,setNavigation]=useState({screenName:'Home'});
+    const [navigate,setNavigation]=useState({screenName:'Search'});
   return (
     <View style={indexStyle.root}>
         {

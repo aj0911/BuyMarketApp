@@ -29,6 +29,12 @@ const indexStyle = StyleSheet.create({
         textAlign:'center',
         fontSize:25,
         width:"30%",
+    },
+    container:{
+        paddingTop:10,
+        paddingLeft:'5%',
+        paddingRight:'5%',
+        paddingBottom:80
     }
 })
 

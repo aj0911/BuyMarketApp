@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 import Colors from '../../assets/Colors/Colors'
 import { SliderBox } from 'react-native-image-slider-box'
 import { Image } from 'react-native'
+import IndexStyle from '../../Index.style'
 
 const Home = ({}) => {
   const images = [
@@ -71,7 +72,7 @@ const Home = ({}) => {
     getLocation();
   },[])
   return (
-    <View style={homeStyle.home}>
+    <View style={IndexStyle.container}>
       <View style={homeStyle.header}>
         <Ionicons size={20} name='location'/>
         <Text style={homeStyle.location}>{location}</Text>
