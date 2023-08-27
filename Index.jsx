@@ -7,22 +7,21 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './Screens/Home/Home';
 import Search from './Screens/Search/Search';
 import User from './Screens/User/User';
+import SafeAreaViewAndroid from './Components/Helper/SafeAreaViewAndroid';
 
 const Index = () => {
-    const [navigate,setNavigation]=useState('Home');
+    const [navigate,setNavigation]=useState({screenName:'Home'});
   return (
-    // <NavigationContainer >
-        <View style={indexStyle.root}>
-            {
-                (()=>{
-                    if(navigate==='Home')return <Home navigation={setNavigation}/>
-                    else if(navigate==='Search')return <Search navigation={setNavigation}/>
-                    else if(navigate==='User')return <User navigation={setNavigation}/>
-                })()
-            }
-            <BottomNavigator currNav={navigate} navigation={setNavigation}/>
-        </View>
-    // </NavigationContainer>
+    <View style={indexStyle.root}>
+        {
+            (()=>{
+                if(navigate.screenName==='Home')return <SafeAreaViewAndroid Component={Home} navigation={setNavigation}/>
+                else if(navigate.screenName==='Search')return <SafeAreaViewAndroid Component={Search} navigation={setNavigation}/>
+                else if(navigate.screenName==='User')return <SafeAreaViewAndroid Component={User} navigation={setNavigation}/>
+            })()
+        }
+        <BottomNavigator currNav={navigate} navigation={setNavigation}/>
+    </View>
   )
 }
 
