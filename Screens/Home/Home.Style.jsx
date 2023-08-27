@@ -1,9 +1,131 @@
 import { StyleSheet } from "react-native";
+import Colors from '../../assets/Colors/Colors'
 
 const homeStyle = StyleSheet.create({
     home:{
-        
+        paddingTop:10,
+        paddingLeft:'5%',
+        paddingRight:'5%',
+        paddingBottom:80
+    },
+    header:{
+        flexDirection:'row',
+        width:'100%',
+        alignItems:'center',
+        justifyContent:'space-between'
+    },
+    location:{
+        fontSize:15,
+        fontFamily:'Medium',
+        color:Colors.navColorDarkLocation
+    },
+    cartText:{
+        position:'absolute',
+        top:-5,
+        right:-5,
+        zIndex:1,
+        backgroundColor:Colors.mainColor,
+        padding:1,
+        fontFamily:'Bold',
+        color:Colors.mainBgColor,
+        fontSize:7,
+        borderRadius:10,
+        height:14,
+        width:14,
+        textAlign:'center'
+    },
+    entryText:{
+        fontFamily:'Bold',
+        fontSize:20,
+        textTransform:'capitalize',
+        marginTop:5
+    },
+    content:{
+        fontFamily:'ExtraBold',
+        fontSize:30,
+        textTransform:'capitalize',
+        marginBottom:5
+    },
+    searchBar:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:Colors.lightNavColor,
+        padding:5,
+        borderRadius:10
+    },
+    search:{
+        width:'10%'
+    },
+    textInput:{
+        width:'80%',
+        fontSize:15,
+        fontFamily:'Regular',
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    camera:{
+        backgroundColor:Colors.veryDarkNavColor,
+        padding:5,
+       borderRadius:5
+    },
+    slider:{
+        marginTop:20,
+        overflow:'hidden',
+        borderRadius:5,
+    },
+    products:{
+        overflow:'hidden',
+        width:'100%',
+        paddingTop:20,
+        gap:10
+    },
+    productsHeader:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        width:'100%',
+        alignItems:'center'
+    },
+    productsHeaderText:{
+        fontFamily:'Bold',
+        fontSize:20,
+        textTransform:'capitalize'
+    },
+    cards:{
+        width:'100%',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        gap:12,
+        flexWrap:'wrap'
+    },
+    card:{
+        width:'45%',
+        overflow:'hidden',
+    },
+    cardImage:{
+        width:'100%',
+        height:150,
+        borderTopLeftRadius:5,
+        borderTopRightRadius:5,
+        marginBottom:5
+    },
+    cardText:{
+        fontFamily:'Bold',
+        fontSize:15
+    },
+    cardPriceBox:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        width:'100%'
+    },
+    cardTextPrice:{
+        fontFamily:'Bold',
+        fontSize:12
     }
+
+
 })
 
 export default homeStyle;
