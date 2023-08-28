@@ -11,7 +11,7 @@ import Login from './Screens/User/Login';
 import Register from './Screens/User/Register';
 
 const Index = () => {
-  const [navigate,setNavigation]=useState({screenName:'Login'});
+  const [navigate,setNavigation]=useState({screenName:'Home'});
   return (
     <View style={indexStyle.root}>
         {

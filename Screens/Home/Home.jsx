@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import homeStyle from './Home.Style'
 import * as Location from 'expo-location'
@@ -136,7 +136,9 @@ const Home = ({}) => {
                       <Text style={homeStyle.cardText}>{e.name}</Text>
                       <View style={homeStyle.cardPriceBox}>
                         <Text style={homeStyle.cardTextPrice}>{e.price}</Text>
-                        <Ionicons style={{backgroundColor:Colors.veryDarkNavColor, borderRadius:10}} onPress={()=>addToCart(e.name)} color={Colors.bgWhite} size={20} name='add'/>
+                        <TouchableOpacity onPress={()=>addToCart(e.name)}>
+                          <Ionicons style={{backgroundColor:Colors.veryDarkNavColor, borderRadius:10}} color={Colors.bgWhite} size={20} name='add'/>
+                        </TouchableOpacity>
                       </View>
                     </View>
                   ))
