@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import Colors from "./assets/Colors/Colors";
 
 const indexStyle = StyleSheet.create({
@@ -35,6 +35,12 @@ const indexStyle = StyleSheet.create({
         paddingLeft:'5%',
         paddingRight:'5%',
         paddingBottom:80
+    },
+    backBtn:{
+        position:'absolute',
+        top:10,
+        left:'5%',
+        zIndex:5
     }
 })
 
