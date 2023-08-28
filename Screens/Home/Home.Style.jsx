@@ -61,7 +61,7 @@ const homeStyle = StyleSheet.create({
     camera:{
         backgroundColor:Colors.veryDarkNavColor,
         padding:5,
-       borderRadius:5
+       borderRadius:10
     },
     slider:{
         marginTop:20,
@@ -88,7 +88,6 @@ const homeStyle = StyleSheet.create({
     cards:{
         width:'100%',
         flexDirection:'row',
-        alignItems:'center',
         justifyContent:'center',
         gap:12,
         flexWrap:'wrap'
@@ -96,6 +95,9 @@ const homeStyle = StyleSheet.create({
     card:{
         width:'45%',
         overflow:'hidden',
+        backgroundColor:Colors.lightNavColor,
+        padding:10,
+        borderRadius:10
     },
     cardImage:{
         width:'100%',
