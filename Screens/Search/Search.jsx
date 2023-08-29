@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import searchStyle from './Search.Style'
 import indexStyle from '../../Index.style'
@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons'
 import Colors from '../../assets/Colors/Colors'
 import { Image,ActivityIndicator } from 'react-native'
 
-const Search = () => {
+const Search = ({navigation}) => {
   const productArr = [
     {
       img:require('../../assets/Images/2.jpg'),
@@ -69,13 +69,16 @@ const Search = () => {
           (search==='')?
           <Image style={searchStyle.banner} source={require('../../assets/Images/searchBanner.png')}/>:
           arr.map((e,i)=>(
-            <View key={i} style={searchStyle.product}>
+            <TouchableOpacity onPress={()=>navigation({
+              screenName:'ProductDetails',
+              data:e
+            })} key={i} style={searchStyle.product}>
               <Image style={searchStyle.productImage} source={e.img}/>
               <View style={searchStyle.content}>
                 <Text style={searchStyle.productName}>{e.name}</Text>
                 <Text style={searchStyle.productPrice}>{e.price}</Text>
               </View>
-            </View>
+            </TouchableOpacity>
           ))
         }
       </View>

@@ -9,9 +9,14 @@ import SafeAreaViewAndroid from './Components/Helper/SafeAreaViewAndroid';
 import Toast from 'react-native-toast-message';
 import Login from './Screens/User/Login';
 import Register from './Screens/User/Register';
+import ProductDetails from './Screens/ProductDetails/ProductDetails';
 
 const Index = () => {
-  const [navigate,setNavigation]=useState({screenName:'Home'});
+  const [navigate,setNavigation]=useState({screenName:'ProductDetails',data:{
+    img:require('./assets/Images/lappy.jpg'),
+    name:'MacBook Air 2023',
+    price:'₹1,19,000'
+  }});
   return (
     <View style={indexStyle.root}>
         {
@@ -19,6 +24,7 @@ const Index = () => {
                 if(navigate.screenName==='Home')return <SafeAreaViewAndroid Component={Home} navigation={setNavigation}/>
                 else if(navigate.screenName==='Search')return <SafeAreaViewAndroid Component={Search} navigation={setNavigation}/>
                 else if(navigate.screenName==='User')return <User navigation={setNavigation}/>
+                else if(navigate.screenName==='ProductDetails')return <ProductDetails data ={navigate.data} navigation={setNavigation}/>
                 else if(navigate.screenName==='Login')return <SafeAreaViewAndroid Component={Login} navigation={setNavigation}/>
                 else if(navigate.screenName==='Register')return <SafeAreaViewAndroid Component={Register} navigation={setNavigation}/>
             })()

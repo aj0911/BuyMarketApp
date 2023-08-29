@@ -6,7 +6,8 @@ const Colors={
     navColorDarkLocation:'#B0AFB4',
     mainColor:'#4AB3F4',
     lightNavColor:'#D8EBF9',
-    veryDarkNavColor:'#28444F'
+    veryDarkNavColor:'#28444F',
+    starColor:'#EECE2B'
 }
 
 export default Colors;

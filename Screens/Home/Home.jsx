@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, Touchable } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import homeStyle from './Home.Style'
 import * as Location from 'expo-location'
@@ -10,7 +10,7 @@ import IndexStyle from '../../Index.style'
 import searchStyle from '../Search/Search.Style'
 import Toast from 'react-native-toast-message'
 
-const Home = ({}) => {
+const Home = ({navigation}) => {
   const images = [
     require('../../assets/Images/2.jpg'),
     require('../../assets/Images/lappy.jpg'),
@@ -132,7 +132,12 @@ const Home = ({}) => {
                 {
                   productArr.map((e,i)=>(
                     <View key={i} style={homeStyle.card}>
-                      <Image style={homeStyle.cardImage} source={e.img}/>
+                      <TouchableOpacity onPress={()=>navigation({
+                        screenName:'ProductDetails',
+                        data:e
+                      })}>
+                        <Image style={homeStyle.cardImage} source={e.img}/>
+                      </TouchableOpacity>
                       <Text style={homeStyle.cardText}>{e.name}</Text>
                       <View style={homeStyle.cardPriceBox}>
                         <Text style={homeStyle.cardTextPrice}>{e.price}</Text>
@@ -150,13 +155,16 @@ const Home = ({}) => {
           <View style={searchStyle.products}>
             {
               arr.map((e,i)=>(
-                  <View key={i} style={searchStyle.product}>
+                  <TouchableOpacity onPress={()=>navigation({
+                    screenName:'ProductDetails',
+                    data:e
+                  })} key={i} style={searchStyle.product}>
                     <Image style={searchStyle.productImage} source={e.img}/>
                     <View style={searchStyle.content}>
                       <Text style={searchStyle.productName}>{e.name}</Text>
                       <Text style={searchStyle.productPrice}>{e.price}</Text>
                     </View>
-                  </View>
+                  </TouchableOpacity>
               ))
             }
           </View>
