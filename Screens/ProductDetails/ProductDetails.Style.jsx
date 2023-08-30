@@ -46,11 +46,79 @@ const productDetailsStyle = StyleSheet.create({
     },
     pName:{
         fontFamily:'Bold',
-        width:'50%',
+        width:'70%',
         fontSize:20
     },
     pPrice:{
-        fontFamily:'Medium'
+        fontFamily:'Bold',
+        fontSize:16,
+        backgroundColor:Colors.lightNavColor,
+        padding:5,
+        borderRadius:10,
+        textAlign:'center',
+        width:'30%',
+        textAlignVertical:'center'
+    },
+    ratings:{
+        flexDirection:'row',
+        gap:2
+    },
+    ratingText:{
+        fontFamily:'Medium',
+        fontSize:16,
+        textAlign:'center',
+        textAlignVertical:'center',
+        marginLeft:5
+    },
+    quantity:{
+        flexDirection:'row',
+        gap:10,
+        justifyContent:'center',
+        alignItems:'center',
+    },
+    quantityText:{
+        fontFamily:'Medium',
+        fontSize:16,
+    },
+    description:{
+        gap:5
+    },
+    header:{
+        fontSize:20,
+        fontFamily:'Medium',
+        textTransform:'capitalize'
+    },
+    descText:{
+        fontSize:12,
+        fontFamily:'Regular',
+        textAlign:'justify'
+    },
+    purchase:{
+        flexDirection:'row',
+        gap:5,
+        width:'100%',
+        alignItems:'center'
+    },
+    buyBtn:{
+        width:'100%',
+        backgroundColor:'black',
+        color:Colors.bgWhite,
+        fontSize:20,
+        fontFamily:'Bold',
+        paddingLeft:10,
+        paddingRight:10,
+        paddingTop:2,
+        borderRadius:20,
+        textTransform:'uppercase',
+        textAlignVertical:'center'
+    },
+    addToCart:{
+        backgroundColor:'black',
+        color:Colors.bgWhite,
+        textAlign:'center',
+        textAlignVertical:'center',
+        padding:7,
+        borderRadius:30
     }
 })
 

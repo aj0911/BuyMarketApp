@@ -44,13 +44,13 @@ const ProductDetails = ({data,navigation}) => {
                 </View>
                 <View style={productDetailsStyle.description}>
                     <Text style={productDetailsStyle.header}>Description</Text>
-                    <Text style={productDetailsStyle.descText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis amet odit fugit. Aspernatur, laboriosam. Consequuntur non maxime corrupti obcaecati nesciunt perspiciatis quos fugit ut sit ex tenetur, tempora nisi.</Text>
+                    <Text style={productDetailsStyle.descText}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio optio, minima neque corrupti eius architecto, explicabo cum atque, quas a dicta corporis perferendis repudiandae error eligendi autem accusantium mollitia? Quae libero accusamus in unde? Provident eveniet fugiat perferendis alias ea repudiandae omnis qui sunt placeat rerum, saepe aliquam exercitationem?</Text>
                 </View>
                 <View style={productDetailsStyle.purchase}>
-                    <TouchableOpacity>
+                    <TouchableOpacity style={{width:'70%'}}>
                         <Text style={productDetailsStyle.buyBtn}>Buy Now</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity style={{width:'30%',alignItems:'center'}}>
                         <Ionicons style={productDetailsStyle.addToCart} name='cart' size={25}/>
                     </TouchableOpacity>
                 </View>

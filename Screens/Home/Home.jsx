@@ -126,7 +126,38 @@ const Home = ({navigation}) => {
             <View style={homeStyle.products}>
               <View style={homeStyle.productsHeader}>
                 <Text style ={homeStyle.productsHeaderText}>New Rivals</Text>
-                <Ionicons size={25} name='cube' />
+                <TouchableOpacity onPress={()=>navigation({
+                  screenName:'GridProduct',
+                  data:[
+                    {
+                      img:require('../../assets/Images/prod1.png'),
+                      name:'Keyboard Set',
+                      price:'₹4,900'
+                    },
+                    {
+                      img:require('../../assets/Images/prod2.jpg'),
+                      name:'MacBook Pro',
+                      price:'₹1,29,000'
+                    },
+                    {
+                      img:require('../../assets/Images/prod3.jpg'),
+                      name:'Telephone',
+                      price:'₹3,999'
+                    },
+                    {
+                      img:require('../../assets/Images/prod4.jpg'),
+                      name:'Chairs Set',
+                      price:'₹19,000'
+                    },
+                    {
+                      img:require('../../assets/Images/lappy.jpg'),
+                      name:'MacBook Air 2023',
+                      price:'₹1,19,000'
+                    },
+                  ]
+                })}>
+                  <Ionicons size={25} name='grid' />
+                </TouchableOpacity>
               </View>
               <View style={homeStyle.cards}>
                 {
