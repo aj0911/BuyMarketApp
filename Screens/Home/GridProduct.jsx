@@ -22,7 +22,10 @@ const GridProduct = ({navigation,data}) => {
             <ScrollView style={gridProductStyle.stories} horizontal={true}>
                 {
                     data.map((e,i)=>(
-                        <TouchableOpacity style={{width:Dimensions.get('screen').width*.7,marginRight:20}} key={i}>
+                        <TouchableOpacity onPress={()=>navigation({
+                          screenName:'ProductDetails',
+                          data:e
+                        })} style={{width:Dimensions.get('screen').width*.7,marginRight:20}} key={i}>
                             <View style={gridProductStyle.card}>
                                 <Image style={gridProductStyle.prodImg} source={e.img} />
                                 <View style={gridProductStyle.content}>
@@ -47,9 +50,6 @@ const GridProduct = ({navigation,data}) => {
                       <Text style={homeStyle.cardText}>{e.name}</Text>
                       <View style={homeStyle.cardPriceBox}>
                         <Text style={homeStyle.cardTextPrice}>{e.price}</Text>
-                        <TouchableOpacity onPress={()=>addToCart(e.name)}>
-                          <Ionicons style={{backgroundColor:Colors.veryDarkNavColor, borderRadius:10}} color={Colors.bgWhite} size={20} name='add'/>
-                        </TouchableOpacity>
                       </View>
                     </View>
                   ))
